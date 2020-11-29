@@ -2,6 +2,7 @@
 
 
 update_image() {
+echo "Updating Kali"
 apt-get update
 apt-get dist_upgrade
 }
@@ -50,7 +51,7 @@ apt-get install beef-xss
 echo "Install fuzzing lists"
 cd /opt/
 git clone https://github.com/danielmiessler/SecLists.git
-
+}
 
 terminal_install () {
 echo "Install CLI tools"

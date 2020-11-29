@@ -35,6 +35,7 @@ syntax on
 EOL
 }
 
+# Commment each function as necessary for use
 app_install
 terminal_install
 configure_env

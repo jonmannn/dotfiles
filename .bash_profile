@@ -48,34 +48,3 @@ export PATH
 
 gam() { "/Users/jon.mann/bin/gam/gam" "$@" ; }
 alias console='screen /dev/cu.USA19H145P1.1'
-
-aws-login()
-{
-    if [[ "${1}" == "corp" ]]; then
-    export AWS_SESSION_TTL=4h
-    export AWS_ASSUME_ROLE_TTL=4h
-    fi
-
-    if [[ "${1}" == "neurotic" || "${1}" == "corp" || "${1}" == "test" || "${1}" == "elemental" || "${1}" == "solidworks" || "${1}" == "iam" ]]; then
-    echo "" > "${HOME}/.aws/env-credentials"
-    for i in `aws-okta exec $1 -- env`; do
-               if [[ `grep AWS <<< $i` ]]; then
-               echo "export ${i}" >> "${HOME}/.aws/env-credentials"
-        fi
-        done
-    source "${HOME}/.aws/env-credentials"
-    else
-        echo "Please specify the role you are assuming first."
-        echo "Role        | Permissions:"
-        echo "corp        | Full admin on corp account"
-        echo "neurotic    | Full admin on Neurotic Media account"
-        echo "test        | Full admin on DevOps Test account"
-        echo "elemental   | Full admin on Elemental account"
-        echo "solidworks  | Full admin on Solidworks account"
-        echo "iam         | Full admin on IAM account"
-    fi
-}
-
-if [ -f "${HOME}/.aws/env-credentials" ]; then
-  source "${HOME}/.aws/env-credentials"
-fi

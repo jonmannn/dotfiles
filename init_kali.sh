@@ -55,10 +55,6 @@ git clone https://github.com/danielmiessler/SecLists.git
 
 terminal_install () {
 echo "Install CLI tools"
-brew install tldr
-brew install python3
-brew install terraform
-brew install warrensbox/tap/tfswitch
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 

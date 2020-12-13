@@ -3,8 +3,8 @@
 
 update_image() {
 echo "Updating Kali"
-apt-get update
-apt-get dist_upgrade
+sudo apt-get update
+sudo apt-get dist_upgrade
 }
 
 app_install () {
@@ -17,13 +17,13 @@ echo "Install Discover Scripts"
 cd /opt/
 git clone https://github.com/leebaird/discover.git
 cd discover/
-./setup.sh
+sudo ./setup.sh
 
 echo "Install Smbexec"
 cd /opt/
 git clone https://github.com/brav0hax/smbexec.git
 cd smbexec
-./install.sh
+sudo ./install.sh
 
 echo "Install Veil"
 cd /opt/
@@ -39,14 +39,14 @@ unzip -d ./wce_v1_41beta_universal.zip/ ~/tools/Windows/WCE
 echo "Install EyeWitness"
 cd /src/
 git clone https://github.com/FortyNorthSecurity/EyeWitness.git
-./EyeWitness/Python/setup/setup.sh
+sudo ./EyeWitness/Python/setup/setup.sh
 
 echo "Add Nmap Script"
 cd /usr/share/nmap/scripts/
 wget https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse
 
 echo "Install BeEF"
-apt-get install beef-xss
+sudo apt-get install beef-xss
 
 echo "Install fuzzing lists"
 cd /opt/

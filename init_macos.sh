@@ -2,6 +2,7 @@
 
 app_install () {
 echo "Installing apps"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew cask install iterm2
 brew cask install rectangle
 brew cask install spotify

@@ -13,6 +13,7 @@ brew cask install pycharm-ce
 brew cask install postman
 brew cask install brave-browser
 brew cask install dropbox
+brew install --cask evernote
 }
 
 terminal_install () {

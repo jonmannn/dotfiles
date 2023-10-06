@@ -6,7 +6,7 @@ read playerversion
 cd ~/src
 git clone https://github.com/mkubecek/vmware-host-modules.git
 
-git checkout player-$playerversion
+git checkout workstation-$playerversion
 
 sudo make
 sudo make install

@@ -39,7 +39,15 @@ sudo apt install gcc
 sudo apt-get install build-essential linux-headers-$(uname -r)
 sudo ln -s /usr/src/linux-headers-$(uname -r)/include/generated/uapi/linux/version.h /usr/src/linux-headers-$(uname -r)/include/linux/version.h
 
-
+# Touchpad config
+sudo gpasswd -a $USER input
+sudo apt-get install wmctrl xdotool
+sudo apt-get install libinput-tools
+cd src
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install
+libinput-gestures-setup autostart start
 
 # Commment each function as necessary for use
 update_image

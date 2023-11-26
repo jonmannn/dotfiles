@@ -107,6 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # we are not multi-region yet
 
 # If you need additional config put it here
-source $HOME/.aws_saml_config.sh
+# source $HOME/.aws_saml_config.sh
 
-export GOPATH=$HOME/go
+# export GOPATH=$HOME/go

@@ -3,17 +3,15 @@
 app_install () {
 echo "Installing apps"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew cask install iterm2
-brew cask install rectangle
-brew cask install spotify
-brew cask install 1password
-brew cask install google-chrome
-brew cask install visual-studio-code
-brew cask install pycharm-ce
-brew cask install postman
-brew cask install brave-browser
-brew cask install dropbox
-brew install --cask evernote
+brew install --cask iterm2
+brew install --cask rectangle
+brew install --cask spotify
+brew install --cask 1password
+brew install --cask google-chrome
+brew install --cask visual-studio-code
+brew install --cask pycharm-ce
+brew install --cask postman
+brew install --cask brave-browser
 }
 
 terminal_install () {
